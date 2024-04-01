@@ -25,9 +25,9 @@
 
     <p>
       <strong>Aficiones:</strong>
-      <label><input type="checkbox" name="cine">Cine</label>
-      <label><input type="checkbox" name="literatura">Literatura</label>
-      <label><input type="checkbox" name="musica">Música</label>
+      <label><input type="checkbox" name="Cine">Cine</label>
+      <label><input type="checkbox" name="Literatura">Literatura</label>
+      <label><input type="checkbox" name="Música">Música</label>
     </p>
 
     <p>

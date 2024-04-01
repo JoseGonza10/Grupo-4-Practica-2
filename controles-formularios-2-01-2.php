@@ -24,14 +24,20 @@
 
 <?php
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
+$nombre = $_GET['nombre'];
+$apellidos = $_GET['apellidos'];
+
+
+print "<p>Su nombre es " . $nombre . "</p>";
+
+print "<p>Sus apellidos son " . $apellidos . "</p>";
 
 ?>
 
   <p><a href="controles-formularios-2-01-1.php">Volver al formulario.</a></p>
 
   <footer>
-    <p>Escriba aquí su nombre</p>
+    <p>José Pablo González Salazar</p>
   </footer>
 </body>
 </html>

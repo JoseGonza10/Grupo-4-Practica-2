@@ -24,9 +24,11 @@
       <input type="reset" value="Borrar">
     </p>
   </form>
+  
 
   <footer>
-    <p>Escriba aquí su nombre</p>
+    <p>José Pablo González Salazar</p>
   </footer>
+
 </body>
 </html>

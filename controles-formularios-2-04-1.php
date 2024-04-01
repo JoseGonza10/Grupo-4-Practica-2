@@ -9,19 +9,20 @@
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css" title="Color">
+
 </head>
 
 <body>
   <h1>Datos personales 4 (Formulario)</h1>
 
   <form action="controles-formularios-2-04-2.php" method="get">
-    <p><label>Indique su dirección de correo: <input type="email" name="correo" size="40"></label></p>
+    <p><label>Indique su dirección de correo: <input type="email" name="correo" size="40" required></label></p>
 
-    <p><label>Confirme su dirección de correo: <input type="email" name="correo2" size="40"></label></p>
+    <p><label>Confirme su dirección de correo: <input type="email" name="correo2" size="40" required></label></p>
 
     <p>
       Indique si quiere recibir correos nuestros:
-      <select name="recibir">
+      <select name="recibir" required>
         <option value="-1">...</option>
         <option value="1">Sí</option>
         <option value="0">No</option>
@@ -35,7 +36,8 @@
   </form>
 
   <footer>
-    <p>Escriba aquí su nombre</p>
+  <p>José Pablo González Salazar</p>
   </footer>
+
 </body>
 </html>

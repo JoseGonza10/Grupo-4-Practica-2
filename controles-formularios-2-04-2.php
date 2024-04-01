@@ -23,15 +23,40 @@
   <h1>Datos personales 4 (Resultado)</h1>
 
 <?php
+$correo = $_GET['correo'];
+$confirmacion = $_GET['correo2'];
+$recibirCorreos = $_GET['recibir'];
+$autorizacion = "";
+if($correo !== $confirmacion){
+  echo "<p>Los correos digitados no son correctos, por favor intentarlo de nuevo</p>";
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
+  echo "<p>Correo electrónico digitado: " . $correo . "</p>";
+
+  echo "<p>Correo de confirmación digitado: " . $confirmacion . "</p>";
+}
+else{
+ switch($recibirCorreos)
+{
+  case 0:
+    $autorizacion = "No";
+    break;
+  case 1:
+    $autorizacion = "Sí";
+    break;
+}
+
+echo "<p>El correo electrónico digitado es:" . $correo . "</p>";
+
+echo "<p>¿El usuario queria recibir nuestros correos?: " . $autorizacion . "</p>";
+}
+
 
 ?>
 
   <p><a href="controles-formularios-2-04-1.php">Volver al formulario.</a></p>
 
   <footer>
-    <p>Escriba aquí su nombre</p>
+  <p>José Pablo González Salazar</p>
   </footer>
 </body>
 </html>

@@ -2,9 +2,14 @@
 /**
  * Controles en formularios (2) 11-2 - controles-formularios-2-11-2.php
  *
- * @author Escriba aquí su nombre
+ * @author Sebastian Vindas Hernandez
  *
  */
+
+  $tamano = isset($_GET['lado']) ? intval($_GET['lado']) : 100;
+  $esquina = isset($_GET['esquina']) ? intval($_GET['esquina']) : 20;
+
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -23,9 +28,9 @@
   <h1>Cuadrado con bordes redondeados (Resultado)</h1>
 
 <?php
-
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
-print " <br> Investigue de svg y rect en html para dibujar"
+echo "<svg width=\"{$tamano}px\" height=\"{$tamano}px\">
+        <rect width=\"{$tamano}px\" height=\"{$tamano}px\" rx=\"{$esquina}px\" ry=\"{$esquina}px\" style=\"fill:blue;\" />
+      </svg>";
 ?>
 
   <p><a href="controles-formularios-2-11-1.php">Volver al formulario.</a></p>

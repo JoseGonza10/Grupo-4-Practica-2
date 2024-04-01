@@ -2,10 +2,14 @@
 /**
  * Controles en formularios (2) 12-2 - controles-formularios-2-12-2.php
  *
- * @author Escriba aquí su nombre
+ * @author Sebastian Vindas Hernandez
  *
  */
+
+    $tamano = isset($_GET['lado']) ? intval($_GET['lado']) : 50;
+    $forma = isset($_GET['forma']) ? $_GET['forma'] : '';
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,15 +28,25 @@
 
 <?php
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
-print " <br> Investigue de svg, rect y circle en html para dibujar"
+    if ($forma == 'cuadrado') {
+      echo "<svg width=\"{$tamano}px\" height=\"{$tamano}px\">";
+      echo "<rect width=\"{$tamano}px\" height=\"{$tamano}px\" style=\"fill:red;\" />";
+      echo "</svg>";
+  } elseif ($forma == 'circulo') {
+      $radio = $tamano / 2;
+      echo "<svg width=\"{$tamano}px\" height=\"{$tamano}px\">";
+      echo "<circle cx=\"{$radio}px\" cy=\"{$radio}px\" r=\"{$radio}px\" style=\"fill:red;\" />";
+      echo "</svg>";
+  } else {
+      echo "<p class=\"aviso\">Por favor, elija una forma y un tamaño para la figura.</p>";
+  }
 
 ?>
 
   <p><a href="controles-formularios-2-12-1.php">Volver al formulario.</a></p>
 
   <footer>
-    <p>Escriba aquí su nombre</p>
+    <p>Sebastian Vindas Hernandez - Grupo 4</p>
   </footer>
 </body>
 </html>

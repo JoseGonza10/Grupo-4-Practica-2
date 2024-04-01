@@ -2,9 +2,14 @@
 /**
  * Controles en formularios (2) 13-2 - controles-formularios-2-13-2.php
  *
- * @author Escriba aquí su nombre
+ * @author Sebastian Vindas Hernandez
  *
  */
+
+    $tamano = isset($_GET['lado']) ? intval($_GET['lado']) : 200; 
+    $colorInicial = isset($_GET['inicial']) ? $_GET['inicial'] : '#ffffff';
+    $colorFinal = isset($_GET['final']) ? $_GET['final'] : '#000000';
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -24,9 +29,17 @@
 
 <?php
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
-print "  <p class=\"aviso\">Utilice el código del ejercicio una vez que capture los datos</p>\n";
+    $gradienteId = "gradienteColor" . uniqid();
 
+    echo "<svg width=\"{$tamano}px\" height=\"{$tamano}px\" xmlns=\"http://www.w3.org/2000/svg\">
+            <defs>
+                <linearGradient id=\"{$gradienteId}\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\">
+                    <stop offset=\"5%\" style=\"stop-color:{$colorInicial};\" />
+                    <stop offset=\"95%\" style=\"stop-color:{$colorFinal};\" />
+                </linearGradient>
+            </defs>
+            <rect width=\"100%\" height=\"100%\" fill=\"url(#{$gradienteId})\" />
+          </svg>";
 
 ?>
 
@@ -34,7 +47,7 @@ print "  <p class=\"aviso\">Utilice el código del ejercicio una vez que capture
   <p><a href="controles-formularios-2-13-1.php">Volver al formulario.</a></p>
 
   <footer>
-    <p>Escriba aquí su nombre</p>
+    <p>Grupo 4</p>
   </footer>
 </body>
 </html>

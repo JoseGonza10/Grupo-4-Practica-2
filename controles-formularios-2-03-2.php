@@ -24,9 +24,48 @@
 
 <?php
 
-print "  <p class=\"aviso\">Ejercicio incompleto</p>\n";
-
 ?>
+<table class="conborde">
+    
+    <tr>
+      <th>Genero</th>
+      <th>Aficiones</th>
+    </tr>
+    
+<tr>
+  <td><?php echo $_GET['genero']; ?></td>
+  <td>
+  <?php 
+  $literatura = $_GET['Literatura'] ?? null;
+  if($literatura){
+
+echo 'Literatura';
+
+  }
+  ?>
+    <?php 
+  $cine = $_GET['Cine'] ?? null;
+  if($cine){
+
+echo 'Cine';
+
+  }
+  ?>
+  <?php 
+  $Musica = $_GET['Música'] ?? null;
+  if($Musica){
+
+echo 'Música';
+
+  }
+  ?>
+</td>
+
+
+
+</tr>
+
+  </table>
 
   <p><a href="controles-formularios-2-03-1.php">Volver al formulario.</a></p>
 
